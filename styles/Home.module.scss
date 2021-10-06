@@ -43,21 +43,26 @@
     margin: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
-
-    &:hover {
-      background-color: #7446e0;
-    }
   }
 }
 
 .purpleButton {
   background-color: #8257e5;
   color: #ffffff;
+  &:hover {
+    background-color: #ffffff;
+    color: #8257e5;
+  }
 }
 
 .minimalButton {
   background-color: #ffffff;
   color: #7547e0;
+
+  &:hover {
+    background-color: #7446e0;
+    color: #ffffff;
+  }
 }
 
 .title {

@@ -6,10 +6,44 @@ import general from "../styles/Home.module.scss";
 import styles from "../styles/About.module.scss";
 
 import HeaderComponent from "./components/Header";
+import Head from "next/head";
 
 const About: NextPage = () => {
   return (
     <div className={general.mainContainer}>
+      <Head>
+        <title>Prae - Sobre</title>
+        <meta
+          name="description"
+          content="Sistema para gerenciamento de manutenções"
+        />
+        {/* <!-- Twitter Card data --> */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@publisher_handle" />
+        <meta name="twitter:title" content="Page Title" />
+        <meta
+          name="twitter:description"
+          content="Page description less than 200 characters"
+        />
+        <meta name="twitter:creator" content="@author_handle" />
+        {/* <!-- Twitter summary card with large image must be at least 280x150px --> */}
+        <meta
+          name="twitter:image:src"
+          content="http://www.example.com/image.jpg"
+        />
+        {/* 
+        <!-- Open Graph data --> */}
+        <meta property="og:title" content="Title Here" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="http://www.example.com/" />
+        <meta property="og:image" content="http://example.com/image.jpg" />
+        <meta property="og:description" content="Description Here" />
+        <meta property="og:site_name" content="Site Name, i.e. Moz" />
+        <meta property="article:section" content="Article Section" />
+        <meta property="article:tag" content="Article Tag" />
+        <meta property="fb:admins" content="Facebook numberic ID" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <HeaderComponent />
       <main className={styles.container}>
         <div className={styles.imageContainer}>
