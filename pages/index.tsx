@@ -19,33 +19,47 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Page description. No longer than 155 characters."
+          content="Gerencia manutenções com precisão em equipe, aumente a vida útil dos seus assets e diminua o downtime da sua empresa. Seus assets prontos para produzir."
         />
         {/* <!-- Twitter Card data --> */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@publisher_handle" />
-        <meta name="twitter:title" content="Page Title" />
+        <meta
+          name="twitter:card"
+          content="https://static-prae.s3.us-east-2.amazonaws.com/Others/praelogoog.png"
+        />
+        <meta name="twitter:site" content="@prae" />
+        <meta
+          name="twitter:title"
+          content="Prae - Sistema de Gerenciamento de manutenção"
+        />
         <meta
           name="twitter:description"
-          content="Page description less than 200 characters"
+          content="Gerencia manutenções com precisão em equipe, aumente a vida útil dos seus assets e diminua o downtime da sua empresa. Seus assets prontos para produzir."
         />
-        <meta name="twitter:creator" content="@author_handle" />
+        <meta name="twitter:creator" content="@prae" />
         {/* <!-- Twitter summary card with large image must be at least 280x150px --> */}
         <meta
           name="twitter:image:src"
-          content="http://www.example.com/image.jpg"
+          content="https://static-prae.s3.us-east-2.amazonaws.com/Others/praelogoog.png"
         />
         {/* 
         <!-- Open Graph data --> */}
-        <meta property="og:title" content="Title Here" />
+        <meta
+          property="og:title"
+          content="Prae - Sistema de Gerenciamento de manutenção"
+        />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="http://www.example.com/" />
-        <meta property="og:image" content="http://example.com/image.jpg" />
-        <meta property="og:description" content="Description Here" />
-        <meta property="og:site_name" content="Site Name, i.e. Moz" />
-        <meta property="article:section" content="Article Section" />
-        <meta property="article:tag" content="Article Tag" />
-        <meta property="fb:admins" content="Facebook numberic ID" />
+        <meta property="og:url" content="app.prae.vigarani.dev" />
+        <meta
+          property="og:image"
+          content="https://static-prae.s3.us-east-2.amazonaws.com/Others/praelogoog.png"
+        />
+        <meta
+          property="og:description"
+          content="Gerencia manutenções com precisão em equipe, aumente a vida útil dos seus assets e diminua o downtime da sua empresa. Seus assets prontos para produzir. "
+        />
+        <meta property="og:site_name" content="Prae" />
+        <meta property="article:section" content="Prae" />
+        <meta property="article:tag" content="CMMS" />
       </Head>
       <HeaderComponent />
       <main className={styles.container}>
