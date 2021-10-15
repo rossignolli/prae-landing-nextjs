@@ -6,8 +6,15 @@ import Link from "next/link";
 import React from "react";
 import styles from "../styles/Home.module.scss";
 import HeaderComponent from "./components/Header";
-
-const Home: NextPage = () => {
+interface NumbersData {
+  equipamentsTotal: number;
+  preventiveTotal: number;
+  userTotal: number;
+}
+interface HomeProps {
+  numbers: NumbersData;
+}
+export default function Home({ numbers }: HomeProps) {
   return (
     <div className={styles.mainContainer}>
       <Head>
@@ -91,15 +98,15 @@ const Home: NextPage = () => {
             </p>
             <div className={styles.containerMaintenance}>
               <div className={styles.numberHightlight}>
-                <span>25</span>
-                <span>Preventivas</span>
+                <span>{numbers.userTotal}</span>
+                <span>Técnicos</span>
               </div>
               <div className={styles.numberHightlight}>
-                <span>25</span>
-                <span>Corretivas</span>
+                <span>{numbers.preventiveTotal}</span>
+                <span>Manutenções</span>
               </div>
               <div className={styles.numberHightlight}>
-                <span>25</span>
+                <span>{numbers.equipamentsTotal}</span>
                 <span>Assets</span>
               </div>
             </div>
@@ -108,6 +115,16 @@ const Home: NextPage = () => {
       </main>
     </div>
   );
-};
+}
 
-export default Home;
+export async function getStaticProps() {
+  const res = await fetch("https://prae.api.vigarani.dev/sessions/home");
+  const numbers = await res.json();
+
+  return {
+    props: {
+      numbers,
+    },
+    revalidate: 25,
+  };
+}
