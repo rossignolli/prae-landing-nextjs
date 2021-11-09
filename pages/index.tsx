@@ -83,9 +83,11 @@ export default function Home({ numbers }: HomeProps) {
             <br />
           </p>
           <div className={styles.buttonContainer}>
-            <button className={styles.purpleButton}>
-              <a href="https://prae.vigarani.dev">Demonstração</a>
-            </button>
+            <a href="https://prae.vigarani.dev">
+              <button className={styles.purpleButton} onClick={() => {}}>
+                Demonstração
+              </button>
+            </a>
             <Link href="/prices">
               <button className={styles.minimalButton}>Saiba mais</button>
             </Link>

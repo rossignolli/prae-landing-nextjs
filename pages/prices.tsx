@@ -90,7 +90,11 @@ const Prices: NextPage = () => {
                   </li>
                 </ul>
                 <div className={general.buttonContainer}>
-                  <button className={general.purpleButton}>Acessar</button>
+                  <a href="https://prae.vigarani.dev">
+                    <button className={general.purpleButton} onClick={() => {}}>
+                      Acessar
+                    </button>
+                  </a>
                 </div>
               </div>
               <div className={styles.price}>
@@ -98,7 +102,7 @@ const Prices: NextPage = () => {
                 <p className={styles.description}>
                   Ideal para empresas de pequeno porte
                 </p>
-                <span className={styles.titlePrice}>Grátis</span>
+                <span className={styles.titlePrice}>R$ 34,49</span>
                 <ul className={styles.list}>
                   <li>
                     <AiOutlineCheckCircle /> 10 Técnicos
@@ -122,10 +126,10 @@ const Prices: NextPage = () => {
                 <p className={styles.description}>
                   Pronto para escalar, grandes empresas.
                 </p>
-                <span className={styles.titlePrice}>Grátis</span>
+                <span className={styles.titlePrice}>R$ 99,49</span>
                 <ul className={styles.list}>
                   <li>
-                    <AiOutlineCheckCircle /> 50 Técnicos
+                    <AiOutlineCheckCircle /> Técnicos Ilimitados
                   </li>
                   <li>
                     <AiOutlineCheckCircle /> Equipamentos Ilimitado
